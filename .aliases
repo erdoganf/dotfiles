@@ -12,8 +12,10 @@ alias -- -="cd -"
 alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias p="cd ~/Projects"
 alias g="git"
+alias k="kubectl"
+alias tf="terraform"
 alias h="history"
 alias j="jobs"
 
@@ -162,3 +164,20 @@ alias reload="exec $SHELL -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# Maven
+alias mci="mvn clean install"
+alias mcist="mvn clean install -DskipTests"
+
+# Gradle
+alias grb="gradle build"
+alias grcb="gradle clean build"
+
+# Print gitconfig
+alias gcfg="less ~/.gitconfig"
+
+# Kubernetes
+alias kx="kubectx"
+alias kgp="k get pods"
+alias kgpw="k get pods --watch"
+alias kdp="k describe pod"

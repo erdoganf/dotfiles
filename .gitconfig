@@ -1,3 +1,8 @@
+[user]
+
+	name = Fehim Erdogan
+	email = fehim.erdogan@trivago.com
+
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -41,6 +46,12 @@
 	# Interactive rebase with the given number of latest commits
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
 
+	# Rebase master
+	rbm = pull origin master --rebase
+
+	# Rebase continue
+	rbc = rebase --continue
+
 	# Remove the old tag with this name and tag the latest commit with it.
 	retag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; r"
 
@@ -78,6 +89,9 @@
 			git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
 		fi \
 	}; f"
+
+	# Checkout master branch by moving the tracked changes
+	gom = !"git stash; git checkout master; git pull origin master; git stash pop"
 
 [apply]
 
@@ -131,7 +145,7 @@
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+; 	gpgsign = true
 
 [diff]
 
@@ -183,3 +197,11 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[pull]
+
+	rebase = true
+
+[gpg]
+
+	program = gpg2
