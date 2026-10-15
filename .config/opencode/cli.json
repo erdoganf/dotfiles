@@ -1,0 +1,13 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "plugins": [
+    "oh-my-opencode-slim"
+  ],
+  "theme": {
+    "name": "catppuccin-macchiato"
+  },
+  "animations": true,
+  "session": {
+    "thinking": "hide"
+  }
+}

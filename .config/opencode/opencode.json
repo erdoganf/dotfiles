@@ -1,0 +1,15 @@
+{
+  "plugin": [
+    "oh-my-opencode-slim",
+    "@dietrichgebert/ponytail"
+  ],
+  "agent": {
+    "explore": {
+      "disable": true
+    },
+    "general": {
+      "disable": true
+    }
+  },
+  "lsp": true
+}
